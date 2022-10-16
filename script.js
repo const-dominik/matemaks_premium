@@ -41,15 +41,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
 var _this = this;
 (function () { return __awaiter(_this, void 0, void 0, function () {
     var getNthParent, sleep, reverseStr, makeYtButtons, getHtml, HTML, oldNodes, newNodes;
@@ -65,7 +56,7 @@ var _this = this;
                     return false;
                 };
                 sleep = function (ms) { return new Promise(function (resolve) { return setTimeout(resolve, ms); }); };
-                reverseStr = function (str) { return __spreadArray([], str, true).reverse().join(""); };
+                reverseStr = function (str) { return str.split("").reverse().join(""); };
                 makeYtButtons = function () {
                     var prems = Array.from(document.querySelectorAll("a.but.b_prem"));
                     prems.forEach(function (prem) {
